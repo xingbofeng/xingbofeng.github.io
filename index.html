@@ -233,7 +233,7 @@
 
                         // Add authorization header if token is provided
                         if (this.githubToken) {
-                            headers['Authorization'] = `token ${this.githubToken}`;
+                            headers['Authorization'] = `${this.githubToken}`;
                         }
 
                         const response = await fetch(`https://api.github.com/repos/${this.repoOwner}/${this.repoName}/issues?state=open&per_page=100`, {
