@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counterxing's Blog</title>
+    <title>xingbofeng 的博客</title>
     <link rel="icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -27,7 +27,7 @@
         .markdown-body pre { background-color: #1f2937; color: #f9fafb; padding: 1em; border-radius: 0.5em; overflow-x: auto; margin-bottom: 1em; }
         .markdown-body pre code { background-color: transparent; padding: 0; color: inherit; }
         .markdown-body img { max-width: 100%; height: auto; border-radius: 0.5em; margin: 1em 0; }
-        
+
         /* Loading spinner */
         .loader {
             border: 4px solid #f3f4f6;
@@ -49,8 +49,8 @@
         <header class="bg-white shadow-sm sticky top-0 z-10">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-3 cursor-pointer" @click="goHome">
-                    <img src="https://avatars.githubusercontent.com/u/19759345?v=4" alt="Avatar" class="w-10 h-10 rounded-full">
-                    <h1 class="text-xl font-bold text-gray-900">Counterxing's Blog</h1>
+                    <img src="https://avatars.githubusercontent.com/xingbofeng" alt="Avatar" class="w-10 h-10 rounded-full">
+                    <h1 class="text-xl font-bold text-gray-900">xingbofeng 的博客</h1>
                 </div>
                 <div class="flex items-center space-x-4">
                     <a href="https://github.com/xingbofeng/xingbofeng.github.io" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors">
@@ -83,9 +83,9 @@
                     </svg>
                     Back to List
                 </button>
-                
+
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{{ selectedIssue.title }}</h1>
-                
+
                 <div class="flex flex-wrap items-center gap-3 mb-8 text-sm text-gray-500 border-b pb-6">
                     <span class="flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-8" v-if="selectedIssue.labels.length > 0">
-                    <span v-for="label in selectedIssue.labels" :key="label.id" 
+                    <span v-for="label in selectedIssue.labels" :key="label.id"
                           class="px-3 py-1 text-xs font-semibold rounded-full"
                           :style="{ backgroundColor: '#' + label.color, color: getContrastColor(label.color) }">
                         {{ label.name }}
@@ -123,20 +123,20 @@
                 <!-- Search & Filter -->
                 <div class="mb-8 flex flex-col md:flex-row gap-4 justify-between items-center">
                     <div class="relative w-full md:w-64">
-                        <input type="text" v-model="searchQuery" placeholder="Search posts..." 
+                        <input type="text" v-model="searchQuery" placeholder="Search posts..."
                                class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    
+
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <button @click="currentLabel = ''" 
+                        <button @click="currentLabel = ''"
                                 class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
                                 :class="currentLabel === '' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'">
                             All
                         </button>
-                        <button v-for="label in uniqueLabels" :key="label" 
+                        <button v-for="label in uniqueLabels" :key="label"
                                 @click="currentLabel = label"
                                 class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
                                 :class="currentLabel === label ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'">
@@ -147,7 +147,7 @@
 
                 <!-- Posts Grid -->
                 <div class="grid gap-6">
-                    <div v-for="issue in filteredIssues" :key="issue.id" 
+                    <div v-for="issue in filteredIssues" :key="issue.id"
                          @click="showDetail(issue)"
                          class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 cursor-pointer border border-transparent hover:border-blue-100 group">
                         <div class="flex justify-between items-start">
@@ -156,13 +156,13 @@
                             </h2>
                             <span class="text-xs text-gray-400 whitespace-nowrap ml-4">{{ formatDate(issue.created_at) }}</span>
                         </div>
-                        
+
                         <div class="text-gray-600 mb-4 line-clamp-3 text-sm">
                             {{ getPreview(issue.body) }}
                         </div>
 
                         <div class="flex flex-wrap gap-2 mt-auto">
-                            <span v-for="label in issue.labels" :key="label.id" 
+                            <span v-for="label in issue.labels" :key="label.id"
                                   class="px-2 py-1 text-xs font-semibold rounded"
                                   :style="{ backgroundColor: '#' + label.color + '33', color: '#' + label.color }">
                                 # {{ label.name }}
@@ -180,7 +180,7 @@
         <!-- Footer -->
         <footer class="bg-white border-t mt-auto">
             <div class="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
-                <p>&copy; {{ new Date().getFullYear() }} Counterxing. All rights reserved.</p>
+                <p>&copy; {{ new Date().getFullYear() }} xingbofeng. All rights reserved.</p>
                 <p class="mt-1">Powered by GitHub Issues & Vue.js</p>
             </div>
         </footer>
@@ -199,7 +199,8 @@
                     currentLabel: '',
                     searchQuery: '',
                     repoOwner: 'xingbofeng',
-                    repoName: 'xingbofeng.github.io'
+                    repoName: 'xingbofeng.github.io',
+                    githubToken: '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'
                 }
             },
             computed: {
@@ -213,8 +214,8 @@
                 filteredIssues() {
                     return this.issues.filter(issue => {
                         const matchesLabel = this.currentLabel === '' || issue.labels.some(l => l.name === this.currentLabel);
-                        const matchesSearch = this.searchQuery === '' || 
-                                            issue.title.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
+                        const matchesSearch = this.searchQuery === '' ||
+                                            issue.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
                                             issue.body.toLowerCase().includes(this.searchQuery.toLowerCase());
                         return matchesLabel && matchesSearch;
                     });
@@ -226,12 +227,24 @@
                     this.error = null;
                     try {
                         // Fetch only issues, not pull requests
-                        const response = await fetch(`https://api.github.com/repos/${this.repoOwner}/${this.repoName}/issues?state=open&per_page=100`);
+                        const headers = {
+                            'Accept': 'application/vnd.github.v3+json'
+                        };
+
+                        // Add authorization header if token is provided
+                        if (this.githubToken) {
+                            headers['Authorization'] = `token ${this.githubToken}`;
+                        }
+
+                        const response = await fetch(`https://api.github.com/repos/${this.repoOwner}/${this.repoName}/issues?state=open&per_page=100`, {
+                            headers: headers
+                        });
+
                         if (!response.ok) throw new Error('Failed to fetch issues');
                         const data = await response.json();
                         // Filter out pull requests
                         this.issues = data.filter(issue => !issue.pull_request);
-                        
+
                         // Check if URL has issue ID
                         this.checkUrlHash();
                     } catch (err) {
