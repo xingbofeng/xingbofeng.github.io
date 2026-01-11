@@ -1,33 +1,305 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Counterxing</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="./style.css">
-        <link rel="manifest" href="./manifest.json">
-        <meta name="msapplication-TileImage" content="./images/logo/logo152.png">
-        <meta name="msapplication-TileColor" content="#2F3BA2">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Counterxing">
-        <link rel="apple-touch-icon" href="./images/logo/logo152.png">
-    </head>
-    <body>
-        <div id="wrapper">
-            <h1>Counterxing</h1>
-            <h2>Why did you encounter me?</h2>
-            <p><a href="https://github.com/xingbofeng/xingbofeng.github.io/issues" target="_blank">Blog</a></p>
-            <p><a href="https://twitter.com/EncounterXing" target="_blank">Twitter</a></p>
-            <p><a href="https://github.com/xingbofeng" target="_blank">Github</a></p>
-            <p><a href="http://weibo.com/u/5384746884" target="_blank">微博</a></p>
-            <p><a href="https://www.zhihu.com/people/FEencounter" target="_blank">知乎</a></p>
-            <p><a href="/leetcode-viewer" target="_blank">leetcode</a></p>
-        </div>
-        <canvas></canvas>
-        <script src="./index.js"></script>
-        <script src="./sw-register.js"></script>
-    </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counterxing's Blog</title>
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <style>
+        /* Custom styles for markdown content */
+        .markdown-body {
+            color: #374151;
+            line-height: 1.6;
+        }
+        .markdown-body h1 { font-size: 2em; font-weight: bold; margin-top: 1.5em; margin-bottom: 0.5em; }
+        .markdown-body h2 { font-size: 1.5em; font-weight: bold; margin-top: 1.5em; margin-bottom: 0.5em; }
+        .markdown-body h3 { font-size: 1.25em; font-weight: bold; margin-top: 1em; margin-bottom: 0.5em; }
+        .markdown-body p { margin-bottom: 1em; }
+        .markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+        .markdown-body ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 1em; }
+        .markdown-body a { color: #2563eb; text-decoration: underline; }
+        .markdown-body blockquote { border-left: 4px solid #e5e7eb; padding-left: 1em; color: #6b7280; font-style: italic; }
+        .markdown-body code { background-color: #f3f4f6; padding: 0.2em 0.4em; border-radius: 0.25em; font-family: monospace; }
+        .markdown-body pre { background-color: #1f2937; color: #f9fafb; padding: 1em; border-radius: 0.5em; overflow-x: auto; margin-bottom: 1em; }
+        .markdown-body pre code { background-color: transparent; padding: 0; color: inherit; }
+        .markdown-body img { max-width: 100%; height: auto; border-radius: 0.5em; margin: 1em 0; }
+        
+        /* Loading spinner */
+        .loader {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans text-gray-800">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3 cursor-pointer" @click="goHome">
+                    <img src="https://avatars.githubusercontent.com/u/19759345?v=4" alt="Avatar" class="w-10 h-10 rounded-full">
+                    <h1 class="text-xl font-bold text-gray-900">Counterxing's Blog</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/xingbofeng/xingbofeng.github.io" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+            <!-- Loading State -->
+            <div v-if="loading" class="flex justify-center items-center py-20">
+                <div class="loader"></div>
+            </div>
+
+            <!-- Error State -->
+            <div v-else-if="error" class="text-center py-20 text-red-600">
+                <p>{{ error }}</p>
+                <button @click="fetchIssues" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Retry</button>
+            </div>
+
+            <!-- Issue Detail View -->
+            <div v-else-if="selectedIssue" class="bg-white rounded-lg shadow-md p-6 md:p-10 animate-fade-in">
+                <button @click="goBack" class="mb-6 flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                    <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to List
+                </button>
+                
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{{ selectedIssue.title }}</h1>
+                
+                <div class="flex flex-wrap items-center gap-3 mb-8 text-sm text-gray-500 border-b pb-6">
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        {{ formatDate(selectedIssue.created_at) }}
+                    </span>
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>
+                        {{ selectedIssue.comments }} Comments
+                    </span>
+                    <a :href="selectedIssue.html_url" target="_blank" class="flex items-center hover:text-blue-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        Open in GitHub
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-8" v-if="selectedIssue.labels.length > 0">
+                    <span v-for="label in selectedIssue.labels" :key="label.id" 
+                          class="px-3 py-1 text-xs font-semibold rounded-full"
+                          :style="{ backgroundColor: '#' + label.color, color: getContrastColor(label.color) }">
+                        {{ label.name }}
+                    </span>
+                </div>
+
+                <div class="markdown-body" v-html="renderMarkdown(selectedIssue.body)"></div>
+            </div>
+
+            <!-- Issue List View -->
+            <div v-else>
+                <!-- Search & Filter -->
+                <div class="mb-8 flex flex-col md:flex-row gap-4 justify-between items-center">
+                    <div class="relative w-full md:w-64">
+                        <input type="text" v-model="searchQuery" placeholder="Search posts..." 
+                               class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <button @click="currentLabel = ''" 
+                                class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
+                                :class="currentLabel === '' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'">
+                            All
+                        </button>
+                        <button v-for="label in uniqueLabels" :key="label" 
+                                @click="currentLabel = label"
+                                class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
+                                :class="currentLabel === label ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'">
+                            {{ label }}
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Posts Grid -->
+                <div class="grid gap-6">
+                    <div v-for="issue in filteredIssues" :key="issue.id" 
+                         @click="showDetail(issue)"
+                         class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 cursor-pointer border border-transparent hover:border-blue-100 group">
+                        <div class="flex justify-between items-start">
+                            <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 mb-2 transition-colors line-clamp-2">
+                                {{ issue.title }}
+                            </h2>
+                            <span class="text-xs text-gray-400 whitespace-nowrap ml-4">{{ formatDate(issue.created_at) }}</span>
+                        </div>
+                        
+                        <div class="text-gray-600 mb-4 line-clamp-3 text-sm">
+                            {{ getPreview(issue.body) }}
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span v-for="label in issue.labels" :key="label.id" 
+                                  class="px-2 py-1 text-xs font-semibold rounded"
+                                  :style="{ backgroundColor: '#' + label.color + '33', color: '#' + label.color }">
+                                # {{ label.name }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div v-if="filteredIssues.length === 0" class="text-center py-12 text-gray-500">
+                        No posts found matching your criteria.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t mt-auto">
+            <div class="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
+                <p>&copy; {{ new Date().getFullYear() }} Counterxing. All rights reserved.</p>
+                <p class="mt-1">Powered by GitHub Issues & Vue.js</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    issues: [],
+                    loading: true,
+                    error: null,
+                    selectedIssue: null,
+                    currentLabel: '',
+                    searchQuery: '',
+                    repoOwner: 'xingbofeng',
+                    repoName: 'xingbofeng.github.io'
+                }
+            },
+            computed: {
+                uniqueLabels() {
+                    const labels = new Set();
+                    this.issues.forEach(issue => {
+                        issue.labels.forEach(label => labels.add(label.name));
+                    });
+                    return Array.from(labels).sort();
+                },
+                filteredIssues() {
+                    return this.issues.filter(issue => {
+                        const matchesLabel = this.currentLabel === '' || issue.labels.some(l => l.name === this.currentLabel);
+                        const matchesSearch = this.searchQuery === '' || 
+                                            issue.title.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
+                                            issue.body.toLowerCase().includes(this.searchQuery.toLowerCase());
+                        return matchesLabel && matchesSearch;
+                    });
+                }
+            },
+            methods: {
+                async fetchIssues() {
+                    this.loading = true;
+                    this.error = null;
+                    try {
+                        // Fetch only issues, not pull requests
+                        const response = await fetch(`https://api.github.com/repos/${this.repoOwner}/${this.repoName}/issues?state=open&per_page=100`);
+                        if (!response.ok) throw new Error('Failed to fetch issues');
+                        const data = await response.json();
+                        // Filter out pull requests
+                        this.issues = data.filter(issue => !issue.pull_request);
+                        
+                        // Check if URL has issue ID
+                        this.checkUrlHash();
+                    } catch (err) {
+                        this.error = 'Failed to load blog posts. Please try again later.';
+                        console.error(err);
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+                formatDate(dateString) {
+                    return new Date(dateString).toLocaleDateString('zh-CN', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                },
+                getPreview(body) {
+                    if (!body) return '';
+                    // Remove markdown symbols for preview
+                    const plainText = body.replace(/[#*`]/g, '');
+                    return plainText.length > 200 ? plainText.slice(0, 200) + '...' : plainText;
+                },
+                getContrastColor(hexcolor) {
+                    // Simple logic to decide text color based on background
+                    const r = parseInt(hexcolor.substr(0, 2), 16);
+                    const g = parseInt(hexcolor.substr(2, 2), 16);
+                    const b = parseInt(hexcolor.substr(4, 2), 16);
+                    const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+                    return yiq >= 128 ? '#000000' : '#ffffff';
+                },
+                showDetail(issue) {
+                    this.selectedIssue = issue;
+                    window.location.hash = `issue-${issue.number}`;
+                    window.scrollTo(0, 0);
+                },
+                goBack() {
+                    this.selectedIssue = null;
+                    window.location.hash = '';
+                    window.scrollTo(0, 0);
+                },
+                goHome() {
+                    this.goBack();
+                    this.currentLabel = '';
+                    this.searchQuery = '';
+                },
+                renderMarkdown(content) {
+                    if (!content) return '';
+                    const html = marked.parse(content);
+                    return DOMPurify.sanitize(html);
+                },
+                checkUrlHash() {
+                    const hash = window.location.hash;
+                    if (hash.startsWith('#issue-')) {
+                        const issueNumber = parseInt(hash.replace('#issue-', ''));
+                        const issue = this.issues.find(i => i.number === issueNumber);
+                        if (issue) {
+                            this.selectedIssue = issue;
+                        }
+                    } else {
+                        this.selectedIssue = null;
+                    }
+                }
+            },
+            mounted() {
+                this.fetchIssues();
+                window.addEventListener('hashchange', this.checkUrlHash);
+            }
+        }).mount('#app');
+    </script>
+</body>
 </html>
