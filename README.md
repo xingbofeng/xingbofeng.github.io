@@ -5,7 +5,7 @@
 
 - 目前在**腾讯， 深圳**工作
 - 主业是**前端开发**，主要专注于**图像处理方向**
-- [个人博客链接](https://github.com/xingbofeng/xingbofeng.github.io/issues)
+- [个人博客链接](https://xingbofeng.github.io)
 - [知乎专栏 - Counter的技术分享](https://www.zhihu.com/column/encounter)
 - 主导过腾讯医疗影像产品的研发，[cornerstoneTools](https://github.com/cornerstonejs/cornerstoneTools)的贡献者之一
 - 一些个人项目：
@@ -15,3 +15,8 @@
   - [generator-naive](https://github.com/xingbofeng/generator-naive)：一个Node.js的服务端CURD脚手架，包含参数校验、日志打印等；
   - [process-on-helper](https://github.com/xingbofeng/process-on-helper)：无限制获取processon容量的工具；
   - [更多...可查看我的GitHub Repositories](https://github.com/xingbofeng?tab=repositories)
+
+## 📝 文章列表
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->

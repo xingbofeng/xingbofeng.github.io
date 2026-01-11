@@ -1,0 +1,30 @@
+name: Update README with Blog Posts
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 0 * * *' # Run every day at midnight
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Update README
+        run: node scripts/update-readme.js
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: update blog posts list in README"
+          file_pattern: README.md
