@@ -19,6 +19,7 @@
 ## 📝 文章列表
 
 <!-- BLOG-POST-LIST:START -->
+- `2026-01-11` [全程一行代码不写，我用 Claude Skill 实现了12年前想要的博客主页](https://xingbofeng.github.io/#issue-61)
 - `2026-01-08` [从性能瓶颈到优化实践：Web端大数据可视化的改造之路](https://xingbofeng.github.io/#issue-60)
 - `2024-03-11` [批处理和流处理](https://xingbofeng.github.io/#issue-59)
 - `2023-04-10` [程序员可能不知道的几个chatgpt高效办公使用案例](https://xingbofeng.github.io/#issue-58)
