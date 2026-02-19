@@ -45,7 +45,7 @@
 - `2018-07-28` [前端性能与异常上报](https://xingbofeng.github.io/#issue-36)
 - `2018-07-27` [服务端推送的几种方式](https://xingbofeng.github.io/#issue-35)
 - `2018-05-11` [在Node.js中使用C++模块](https://xingbofeng.github.io/#issue-34)
-- `2018-04-27` [自己实现一个���权重的事件监听器](https://xingbofeng.github.io/#issue-33)
+- `2018-04-27` [自己实现一个带权重的事件监听器](https://xingbofeng.github.io/#issue-33)
 - `2018-04-21` [Vue组件库开发总结：通信方式](https://xingbofeng.github.io/#issue-32)
 - `2018-04-21` [Linux epoll & Node.js Event Loop & I / O复用 ](https://xingbofeng.github.io/#issue-31)
 - `2018-04-15` [node fs](https://xingbofeng.github.io/#issue-30)
