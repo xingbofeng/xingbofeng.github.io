@@ -71,7 +71,7 @@
 - `2017-07-23` [网易有道智能题库项目总结](https://xingbofeng.github.io/#issue-10)
 - `2017-07-23` [网易有道题库测试+女生节项目总结](https://xingbofeng.github.io/#issue-9)
 - `2017-07-23` [JavaScript中的tasks与microtasks](https://xingbofeng.github.io/#issue-8)
-- `2017-07-23` [Redux深入���习](https://xingbofeng.github.io/#issue-7)
+- `2017-07-23` [Redux深入学习](https://xingbofeng.github.io/#issue-7)
 - `2017-07-23` [Mocha简介](https://xingbofeng.github.io/#issue-6)
 - `2017-07-23` [什么是敏捷开发](https://xingbofeng.github.io/#issue-5)
 - `2017-07-23` [别在props中使用bind](https://xingbofeng.github.io/#issue-4)
