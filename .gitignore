@@ -1,0 +1,4 @@
+node_modules/
+dist/
+public/issues.json
+.analysis-cache.md

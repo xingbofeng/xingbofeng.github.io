@@ -1,0 +1,23 @@
+{
+  "name": "xingbofeng.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-issues-data.mjs && vite build",
+    "preview": "vite preview",
+    "sync:readme": "node scripts/update-readme.js",
+    "generate:issues": "node scripts/generate-issues-data.mjs"
+  },
+  "dependencies": {
+    "dompurify": "^3.2.6",
+    "marked": "^15.0.7",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.0.11"
+  }
+}
