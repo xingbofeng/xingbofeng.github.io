@@ -4,11 +4,11 @@
 
 ### Featured projects / 代表项目
 
-- [绘梦工坊 (dreamweaver-picturebook)](https://github.com/xingbofeng/dreamweaver-picturebook) — AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。
-- [CrewPilot](https://github.com/xingbofeng/crewpilot) — a multi-agent control plane for real repositories, turning goals into plan-execute-review loops.
-- [mini-code](https://github.com/xingbofeng/mini-code) — a local-first Coding Agent skeleton, focused on tool use, context, permissions, and session continuity.
-- [vuex-typescript-commit-dispatch-prompt](https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt) — a small DX helper that makes Vuex \`commit\` and \`dispatch\` calls cleaner and safer.
-- [protobuf-to-ts-api](https://github.com/xingbofeng/protobuf-to-ts-api) — generates TypeScript types, API request files, JSON Schema, and mock server assets from protobuf files.
+- [DreamWeaver Workshop](https://github.com/xingbofeng/dreamweaver-picturebook) — AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。
+- [CrewPilot](https://github.com/xingbofeng/crewpilot) — 面向真实代码仓库的多智能体控制平面，把目标拆成规划、执行、审查、复盘的闭环。
+- [mini-code](https://github.com/xingbofeng/mini-code) — 本地优先的 Coding Agent 骨架，重点打磨工具调用、上下文、权限和会话连续性。
+- [vuex-typescript-commit-dispatch-prompt](https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt) — 让 Vuex \`commit\` 和 \`dispatch\` 调用更清爽、更安全的小型 DX 工具。
+- [protobuf-to-ts-api](https://github.com/xingbofeng/protobuf-to-ts-api) — 通过 protobuf 文件自动生成 TypeScript 类型、API 请求文件、JSON Schema 和 mock 服务资源。
 
 ### I build AI picture book systems, agentic coding workflows, and developer tools that make engineering work feel controlled.
 
