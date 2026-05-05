@@ -4,7 +4,7 @@
 
 ### Featured projects / 代表项目
 
-- [DreamWeaver Workshop](https://github.com/xingbofeng/dreamweaver-picturebook) — AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。
+- [dreamweaver-picturebook - 绘梦工坊](https://github.com/xingbofeng/dreamweaver-picturebook) — 一句灵感，生成一本可编辑、可预览、可导出的 AI 儿童绘本创作工作台。
 - [CrewPilot](https://github.com/xingbofeng/crewpilot) — 面向真实代码仓库的多智能体控制平面，把目标拆成规划、执行、审查、复盘的闭环。
 - [mini-code](https://github.com/xingbofeng/mini-code) — 本地优先的 Coding Agent 骨架，重点打磨工具调用、上下文、权限和会话连续性。
 - [vuex-typescript-commit-dispatch-prompt](https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt) — 让 Vuex \`commit\` 和 \`dispatch\` 调用更清爽、更安全的小型 DX 工具。

@@ -23,9 +23,9 @@ export const profile = {
   ],
   projects: [
     {
-      nameEn: 'DreamWeaver Workshop',
+      nameEn: 'dreamweaver-picturebook - 绘梦工坊 | 一句灵感，生成一本可编辑、可预览、可导出的 AI 儿童绘本创作工作台',
       href: 'https://github.com/xingbofeng/dreamweaver-picturebook',
-      zh: 'AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。',
+      zh: 'AI 绘本工坊，把灵感直接变成可编辑、可预览、可导出的成书工作台。',
     },
     {
       nameEn: 'CrewPilot',
