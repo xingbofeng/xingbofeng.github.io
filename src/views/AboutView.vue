@@ -23,6 +23,8 @@ const agentFocus = [
   ['Human-AI Workflow', '让工程师保持掌控，同时让 Agent 承担可重复的工程工作'],
 ];
 
+const projects = profile.projects;
+
 const visualEngineering = [
   ['Medical Imaging', '医学影像查看器、标注流程、渲染性能与领域交互设计'],
   ['Image & Video Processing', '前端媒体加载、渲染、播放、交互与性能优化链路'],
@@ -60,8 +62,32 @@ const now = [
       <div class="intro-panel__aside">
         <div class="quote-card">
           <p>My current obsession: turning AI Agents into reliable engineering collaborators, not just impressive demos.</p>
-          <p>我现在最着迷的事情：把 AI Agent 做成可靠的工程协作者，而不只是看起来很酷的 Demo。</p>
-        </div>
+        <p>我现在最着迷的事情：把 AI Agent 做成可靠的工程协作者，而不只是看起来很酷的 Demo。</p>
+      </div>
+    </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="section-heading">
+        <p class="section-kicker">Featured projects / 代表项目</p>
+        <h2>Projects that show how I build.</h2>
+        <p>英文项目名 + 中文简介，重点放在 AI 绘本、Agent 编排和开发者工具这几条主线。</p>
+      </div>
+      <div class="links-grid">
+        <a
+          v-for="project in projects"
+          :key="project.nameEn"
+          :href="project.href"
+          target="_blank"
+          rel="noreferrer"
+          class="link-card glass-card"
+        >
+          <div>
+            <h3>{{ project.nameEn }}</h3>
+            <p>{{ project.zh }}</p>
+          </div>
+          <span>Open</span>
+        </a>
       </div>
     </section>
 

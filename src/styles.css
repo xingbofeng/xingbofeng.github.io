@@ -560,6 +560,7 @@ button {
 .timeline,
 .article-layout,
 .neighbor-nav,
+.projects-section,
 .links-grid,
 .tag-board {
   display: grid;
@@ -980,6 +981,32 @@ button {
 .links-grid,
 .tag-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.projects-section {
+  padding: 0;
+}
+
+.section-heading {
+  display: grid;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 2.4vw, 2.35rem);
+  line-height: 1.06;
+  color: var(--text);
+}
+
+.section-heading p {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 .link-card,

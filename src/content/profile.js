@@ -21,6 +21,33 @@ export const profile = {
       zh: '我尤其关注如何把 Agent 从“能聊天的模型”推进到“能理解上下文、调用工具、参与真实工程流程的协作者”。',
     },
   ],
+  projects: [
+    {
+      nameEn: 'DreamWeaver Workshop',
+      href: 'https://github.com/xingbofeng/dreamweaver-picturebook',
+      zh: 'AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。',
+    },
+    {
+      nameEn: 'CrewPilot',
+      href: 'https://github.com/xingbofeng/crewpilot',
+      zh: '面向真实代码仓库的多智能体控制平面，把目标拆成规划、执行、审查、复盘的闭环。',
+    },
+    {
+      nameEn: 'mini-code',
+      href: 'https://github.com/xingbofeng/mini-code',
+      zh: '本地优先的 Coding Agent 骨架，重点打磨工具调用、上下文、权限和会话连续性。',
+    },
+    {
+      nameEn: 'vuex-typescript-commit-dispatch-prompt',
+      href: 'https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt',
+      zh: '让 Vuex 的 commit 和 dispatch 调用更清爽、更安全的小型 DX 工具。',
+    },
+    {
+      nameEn: 'protobuf-to-ts-api',
+      href: 'https://github.com/xingbofeng/protobuf-to-ts-api',
+      zh: '通过 protobuf 文件自动生成 TypeScript 类型、API 请求文件、JSON Schema 和 mock 服务资源。',
+    },
+  ],
   focusAreas: [
     {
       enTitle: 'AI Agent Engineering',
