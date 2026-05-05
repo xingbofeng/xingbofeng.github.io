@@ -2,9 +2,17 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,45:0F766E,100:2563EB&height=220&section=header&text=Counterxing&fontSize=58&fontColor=F8FAFC&animation=fadeIn&fontAlignY=38&desc=AI%20Agent%20Builder%20%C2%B7%20Frontend%20Expert%20%C2%B7%20Agentic%20%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A2%E7%B4%A2%E8%80%85" alt="Counterxing banner" />
 
-### I build agentic coding workflows, complex visual systems, and tools that make engineers faster.
+### Featured projects / 代表项目
 
-### 我构建 Agentic Coding 工作流、复杂视觉工程系统，以及让工程师更高效的工具。
+- [绘梦工坊 (dreamweaver-picturebook)](https://github.com/xingbofeng/dreamweaver-picturebook) — AI 绘本工坊，从一句灵感到可编辑、可预览、可导出的完整创作工作台。
+- [CrewPilot](https://github.com/xingbofeng/crewpilot) — a multi-agent control plane for real repositories, turning goals into plan-execute-review loops.
+- [mini-code](https://github.com/xingbofeng/mini-code) — a local-first Coding Agent skeleton, focused on tool use, context, permissions, and session continuity.
+- [vuex-typescript-commit-dispatch-prompt](https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt) — a small DX helper that makes Vuex \`commit\` and \`dispatch\` calls cleaner and safer.
+- [protobuf-to-ts-api](https://github.com/xingbofeng/protobuf-to-ts-api) — generates TypeScript types, API request files, JSON Schema, and mock server assets from protobuf files.
+
+### I build AI picture book systems, agentic coding workflows, and developer tools that make engineering work feel controlled.
+
+### 我构建 AI 绘本系统、Agentic Coding 工作流，以及让工程协作更可控的工具。
 
 [![Blog](https://img.shields.io/badge/Blog-xingbofeng.github.io-020617?style=for-the-badge&logo=githubpages&logoColor=white)](https://xingbofeng.github.io/)
 [![Zhihu](https://img.shields.io/badge/Zhihu-Counter%E7%9A%84%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-056DE8?style=for-the-badge&logo=zhihu&logoColor=white)](https://www.zhihu.com/column/encounter)
