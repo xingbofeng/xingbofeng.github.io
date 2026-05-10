@@ -8,11 +8,12 @@ import ArticleView from './views/ArticleView.vue';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: '/', name: 'home', component: HomeView, meta: { title: 'Counterxing Blog' } },
-    { path: '/about', name: 'about', component: AboutView, meta: { title: 'About | Counterxing Blog' } },
-    { path: '/tags', name: 'tags', component: TagsView, meta: { title: 'Tags | Counterxing Blog' } },
-    { path: '/tag/:slug', name: 'tag', component: TagView, meta: { title: 'Tag | Counterxing Blog' } },
-    { path: '/article/:number', name: 'article', component: ArticleView, meta: { title: 'Article | Counterxing Blog' } },
+    { path: '/', name: 'home', component: HomeView, meta: { title: 'Counterxing' } },
+    { path: '/about', name: 'about', component: AboutView, meta: { title: 'Project | Counterxing' } },
+    { path: '/articles', name: 'articles', component: TagsView, meta: { title: 'Articles | Counterxing' } },
+    { path: '/tags', redirect: '/articles' },
+    { path: '/tag/:slug', name: 'tag', component: TagView, meta: { title: 'Tag | Counterxing' } },
+    { path: '/article/:number', name: 'article', component: ArticleView, meta: { title: 'Article | Counterxing' } },
   ],
   scrollBehavior() {
     return { top: 0, left: 0 };
@@ -20,7 +21,7 @@ const router = createRouter({
 });
 
 router.afterEach((to) => {
-  const title = to.meta?.title ? `${to.meta.title}` : 'Counterxing Blog';
+  const title = to.meta?.title ? `${to.meta.title}` : 'Counterxing';
   document.title = title;
 });
 

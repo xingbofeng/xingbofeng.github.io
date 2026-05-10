@@ -48,7 +48,7 @@ onMounted(loadIssues);
     <div v-else-if="error" class="state-card glass-card state-card--error">{{ error }}</div>
     <div v-else-if="emptyState" class="state-card glass-card">
       No posts matched / 没有找到符合这个标签的文章。<br />
-      <RouterLink to="/tags" class="read-more">Back to tags / 返回标签页</RouterLink>
+      <RouterLink to="/articles" class="read-more">Back to articles / 返回文章页</RouterLink>
     </div>
     <section v-else class="archive">
       <div class="archive-list">
