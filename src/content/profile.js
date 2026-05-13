@@ -23,14 +23,6 @@ export const profile = {
   ],
   projects: [
     {
-      kicker: 'AI Creation',
-      title: 'dreamweaver-picturebook',
-      nameEn: 'dreamweaver-picturebook - 绘梦工坊',
-      href: 'https://picturebook.counterxing.top',
-      zh: 'AI 绘本工坊，把灵感直接变成可编辑、可预览、可导出的成书工作台。',
-      en: 'An AI picture book creation workspace that turns one idea into an editable, previewable, export-ready book.',
-    },
-    {
       kicker: 'Agent-native DevTools',
       title: 'baipiao',
       nameEn: 'baipiao - Agent-native 免费技术栈配置器',

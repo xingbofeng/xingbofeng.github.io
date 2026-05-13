@@ -38,12 +38,6 @@ I focus on **AI Agent**, **agent architecture**, **full-stack architecture**, **
 
 ## Featured Projects / 代表项目
 
-### [dreamweaver-picturebook - 绘梦工坊](https://picturebook.counterxing.top)
-
-生成一本可编辑、可预览、可导出的 AI 儿童绘本创作工作台。
-
-An AI picture book creation workspace that turns a single idea into an editable, previewable, exportable book.
-
 ### [baipiao](https://baipiao.counterxing.top)
 
 面向开发者的 Agent-native 免费技术栈配置器，覆盖 CLI、MCP、本地 Vault、环境变量生成和文档。
@@ -122,11 +116,11 @@ A local-first AI publishing system for family memory, turning children's artwork
 ## Now / 当前
 
 - Exploring AI agents as systems that can participate in architecture, engineering, content, and product decisions.
-- Building and refining **dreamweaver-picturebook**, **baipiao**, and **KidMemory** as independent AI products.
+- Building and refining **baipiao** and **KidMemory** as independent AI products.
 - Writing about AI agents, full-stack architecture, product thinking, and multimodal creation workflows.
 
 - 我正在探索如何把智能体从对话入口，推进到能参与架构、工程、内容和产品决策的系统。
-- 我在继续打磨 **dreamweaver-picturebook**、**baipiao** 和 **KidMemory** 这些独立 AI 产品。
+- 我在继续打磨 **baipiao** 和 **KidMemory** 这些独立 AI 产品。
 - 我也会持续写 AI Agent、全栈架构、产品思考和多模态创作工作流相关内容。
 
 ## Links / 链接
