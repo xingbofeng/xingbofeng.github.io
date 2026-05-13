@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "node scripts/generate-issues-data.mjs && vite build",
     "preview": "vite preview",
-    "sync:readme": "node scripts/update-readme.js",
     "generate:issues": "node scripts/generate-issues-data.mjs"
   },
   "dependencies": {
