@@ -99,9 +99,9 @@ onMounted(loadIssues);
     <section id="project" class="landing-section landing-section--project projects-preview">
       <div class="project-row">
         <a v-for="project in projects" :key="project.href" :href="project.href" target="_blank" rel="noreferrer" class="project-card glass-card">
-          <span>Dreamweaver Picturebook</span>
-          <h3>dreamweaver-picturebook</h3>
-          <small class="project-card__subtitle">绘梦工坊 · AI 儿童绘本创作工作台</small>
+          <span>{{ project.kicker }}</span>
+          <h3>{{ project.title }}</h3>
+          <small class="project-card__subtitle">{{ project.nameEn }}</small>
           <p>{{ project.zh }}</p>
         </a>
       </div>

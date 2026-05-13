@@ -6,7 +6,7 @@
 
 ### 前腾讯前大疆研发专家，目前专注全栈 Agent 架构
 
-[![Blog](https://img.shields.io/badge/Blog-xingbofeng.github.io-020617?style=for-the-badge&logo=githubpages&logoColor=white)](https://xingbofeng.github.io/)
+[![Blog](https://img.shields.io/badge/Blog-counterxing.top-020617?style=for-the-badge&logo=vercel&logoColor=white)](https://counterxing.top/)
 [![Xiaohongshu](https://img.shields.io/badge/Xiaohongshu-Counterxing-FF2442?style=for-the-badge&logo=xiaohongshu&logoColor=white)](https://www.xiaohongshu.com/user/profile/5fe3215600000000010032bb)
 [![Bilibili](https://img.shields.io/badge/Bilibili-Counterxing-00A1D6?style=for-the-badge&logo=bilibili&logoColor=white)](https://space.bilibili.com/31193282)
 [![Zhihu](https://img.shields.io/badge/Zhihu-Counter%E7%9A%84%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-056DE8?style=for-the-badge&logo=zhihu&logoColor=white)](https://www.zhihu.com/column/encounter)
@@ -36,13 +36,25 @@ I focus on **AI Agent**, **agent architecture**, **full-stack architecture**, **
 
 ---
 
-## Featured Project / 代表项目
+## Featured Projects / 代表项目
 
-### [dreamweaver-picturebook - 绘梦工坊](https://github.com/xingbofeng/dreamweaver-picturebook)
+### [dreamweaver-picturebook - 绘梦工坊](https://picturebook.counterxing.top)
 
 生成一本可编辑、可预览、可导出的 AI 儿童绘本创作工作台。
 
 An AI picture book creation workspace that turns a single idea into an editable, previewable, exportable book.
+
+### [baipiao](https://baipiao.counterxing.top)
+
+面向开发者的 Agent-native 免费技术栈配置器，覆盖 CLI、MCP、本地 Vault、环境变量生成和文档。
+
+An agent-native free-stack configurator with CLI, MCP, local Vault, env generation, and docs.
+
+### [KidMemory](https://kidmemory.counterxing.top)
+
+本地优先的 AI 家庭记忆出版系统，把孩子的画作、照片和成长瞬间变成可保存的作品集。
+
+A local-first AI publishing system for family memory, turning children's artwork, photos, and milestones into durable memory books.
 
 ---
 
@@ -110,17 +122,17 @@ An AI picture book creation workspace that turns a single idea into an editable,
 ## Now / 当前
 
 - Exploring AI agents as systems that can participate in architecture, engineering, content, and product decisions.
-- Building and refining **dreamweaver-picturebook - 绘梦工坊** as an AI creation tool.
+- Building and refining **dreamweaver-picturebook**, **baipiao**, and **KidMemory** as independent AI products.
 - Writing about AI agents, full-stack architecture, product thinking, and multimodal creation workflows.
 
 - 我正在探索如何把智能体从对话入口，推进到能参与架构、工程、内容和产品决策的系统。
-- 我在继续打磨 **dreamweaver-picturebook - 绘梦工坊** 这个 AI 创作工具。
+- 我在继续打磨 **dreamweaver-picturebook**、**baipiao** 和 **KidMemory** 这些独立 AI 产品。
 - 我也会持续写 AI Agent、全栈架构、产品思考和多模态创作工作流相关内容。
 
 ## Links / 链接
 
 - GitHub Profile / GitHub 主页: [github.com/xingbofeng](https://github.com/xingbofeng)
-- Blog / 博客: [xingbofeng.github.io](https://xingbofeng.github.io)
+- Blog / 博客: [counterxing.top](https://counterxing.top)
 - Xiaohongshu / 小红书: [counterxing](https://www.xiaohongshu.com/user/profile/5fe3215600000000010032bb)
 - Bilibili / 哔哩哔哩: [space.bilibili.com/31193282](https://space.bilibili.com/31193282)
 - Zhihu Column / 知乎专栏: [Counter 的技术分享](https://www.zhihu.com/column/encounter)

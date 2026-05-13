@@ -1,0 +1,36 @@
+name: Rebuild Blog on Vercel
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+      - labeled
+      - unlabeled
+      - closed
+      - deleted
+  label:
+    types:
+      - created
+      - edited
+      - deleted
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-rebuild
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: |
+          test -n "${VERCEL_DEPLOY_HOOK_URL}"
+          curl -fsS -X POST "${VERCEL_DEPLOY_HOOK_URL}"
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}

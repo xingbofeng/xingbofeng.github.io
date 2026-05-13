@@ -23,9 +23,28 @@ export const profile = {
   ],
   projects: [
     {
-      nameEn: 'dreamweaver-picturebook - 绘梦工坊 | AI 儿童绘本创作工作台',
-      href: 'https://github.com/xingbofeng/dreamweaver-picturebook',
+      kicker: 'AI Creation',
+      title: 'dreamweaver-picturebook',
+      nameEn: 'dreamweaver-picturebook - 绘梦工坊',
+      href: 'https://picturebook.counterxing.top',
       zh: 'AI 绘本工坊，把灵感直接变成可编辑、可预览、可导出的成书工作台。',
+      en: 'An AI picture book creation workspace that turns one idea into an editable, previewable, export-ready book.',
+    },
+    {
+      kicker: 'Agent-native DevTools',
+      title: 'baipiao',
+      nameEn: 'baipiao - Agent-native 免费技术栈配置器',
+      href: 'https://baipiao.counterxing.top',
+      zh: '面向开发者的 Agent-native 免费技术栈配置器，覆盖 CLI、MCP、本地 Vault、环境变量生成和文档。',
+      en: 'An agent-native free-stack configurator with CLI, MCP, local Vault, env generation, and docs.',
+    },
+    {
+      kicker: 'Local-first Memory',
+      title: 'kidmemory',
+      nameEn: 'KidMemory - Local-first AI family memory publishing',
+      href: 'https://kidmemory.counterxing.top',
+      zh: '本地优先的 AI 家庭记忆出版系统，把孩子的画作、照片和成长瞬间变成可保存的作品集。',
+      en: "A local-first AI publishing system for family memory, turning children's artwork, photos, and milestones into durable memory books.",
     },
   ],
   focusAreas: [
@@ -62,7 +81,7 @@ export const profile = {
   ],
   links: [
     { label: 'GitHub', href: 'https://github.com/xingbofeng', descEn: 'Profile and open-source work', descZh: '主页与开源工作' },
-    { label: 'Blog', href: 'https://xingbofeng.github.io', descEn: 'The blog itself', descZh: '博客主页' },
+    { label: 'Blog', href: 'https://counterxing.top', descEn: 'The blog itself', descZh: '博客主页' },
     { label: 'Xiaohongshu', href: 'https://www.xiaohongshu.com/user/profile/5fe3215600000000010032bb', descEn: 'Notes on personal exploration', descZh: '个人观点与创作沉淀' },
     { label: 'Bilibili', href: 'https://space.bilibili.com/31193282', descEn: 'Video channel', descZh: '视频内容与分享' },
     { label: 'Zhihu', href: 'https://www.zhihu.com/column/encounter', descEn: 'Technical writing', descZh: '技术写作' },

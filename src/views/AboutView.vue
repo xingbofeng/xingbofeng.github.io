@@ -15,9 +15,9 @@ const projects = profile.projects;
         rel="noreferrer"
         class="project-card project-card--featured glass-card"
       >
-        <span>GitHub / xingbofeng</span>
+        <span>{{ project.kicker }}</span>
         <h3>{{ project.nameEn }}</h3>
-        <p>绘梦工坊：生成一本可编辑、可预览、可导出的 AI 儿童绘本。</p>
+        <p>{{ project.zh }}</p>
         <small>{{ project.href }}</small>
       </a>
     </section>
