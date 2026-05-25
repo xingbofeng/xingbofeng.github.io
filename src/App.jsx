@@ -263,7 +263,9 @@ function Home() {
           </a>
         </div>
         <div className="blog-hero-phone">
-          <Phone />
+          <div className="blog-hero-phone-stage">
+            <Phone />
+          </div>
         </div>
       </section>
 
