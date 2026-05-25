@@ -84,5 +84,10 @@ async function main() {
 
 main().catch((error) => {
   console.error(error.message);
+  if (fs.existsSync(PUBLIC_PATH)) {
+    console.warn(`Keeping existing issues cache at ${PUBLIC_PATH}`);
+    process.exit(0);
+  }
+
   process.exit(1);
 });

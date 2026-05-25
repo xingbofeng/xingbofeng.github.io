@@ -38,17 +38,29 @@ I focus on **AI Agent**, **agent architecture**, **full-stack architecture**, **
 
 ## Featured Projects / 代表项目
 
-### [baipiao](https://baipiao.counterxing.top)
+### [baipiao](https://github.com/xingbofeng/baipiao)
 
 面向开发者的 Agent-native 免费技术栈配置器，覆盖 CLI、MCP、本地 Vault、环境变量生成和文档。
 
 An agent-native free-stack configurator with CLI, MCP, local Vault, env generation, and docs.
 
-### [KidMemory](https://kidmemory.counterxing.top)
+### [KidMemory](https://github.com/xingbofeng/kidmemory)
 
 本地优先的 AI 家庭记忆出版系统，把孩子的画作、照片和成长瞬间变成可保存的作品集。
 
 A local-first AI publishing system for family memory, turning children's artwork, photos, and milestones into durable memory books.
+
+### [browser-helm](https://github.com/xingbofeng/browser-helm)
+
+面向浏览器自动化与调试工作流的工程工具，帮助把浏览器能力稳定接入 Agent 任务。
+
+An engineering tool for browser automation and debugging workflows, making browser capabilities easier to connect to agent tasks.
+
+### [skill-deck](https://github.com/xingbofeng/skill-deck)
+
+用于组织、沉淀和分发 Agent skills 的工具集合，让能力可以像卡片一样被复用和组合。
+
+A toolset for organizing, preserving, and sharing agent skills so capabilities can be reused and composed like cards.
 
 ---
 
@@ -116,11 +128,11 @@ A local-first AI publishing system for family memory, turning children's artwork
 ## Now / 当前
 
 - Exploring AI agents as systems that can participate in architecture, engineering, content, and product decisions.
-- Building and refining **baipiao** and **KidMemory** as independent AI products.
+- Building and refining **baipiao**, **KidMemory**, **browser-helm**, and **skill-deck** as independent AI products and agent tools.
 - Writing about AI agents, full-stack architecture, product thinking, and multimodal creation workflows.
 
 - 我正在探索如何把智能体从对话入口，推进到能参与架构、工程、内容和产品决策的系统。
-- 我在继续打磨 **baipiao** 和 **KidMemory** 这些独立 AI 产品。
+- 我在继续打磨 **baipiao**、**KidMemory**、**browser-helm** 和 **skill-deck** 这些独立 AI 产品与 Agent 工具。
 - 我也会持续写 AI Agent、全栈架构、产品思考和多模态创作工作流相关内容。
 
 ## Links / 链接
