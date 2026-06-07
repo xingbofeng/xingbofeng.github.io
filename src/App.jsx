@@ -36,6 +36,12 @@ const socialLinks = [
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/zhihu.svg',
     color: '#2f6fed',
   },
+  {
+    label: 'X',
+    href: 'https://x.com/Counterxing',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/x.svg',
+    color: '#0f1419',
+  },
 ];
 
 const cardColors = ['app-yellow', 'app-teal', 'app-pink', 'app-blue', 'app-green', 'app-orange', 'yellow-green', 'brown'];

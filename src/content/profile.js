@@ -54,6 +54,22 @@ export const profile = {
       zh: '用于组织、沉淀和分发 Agent skills 的工具集合，让能力可以像卡片一样被复用和组合。',
       en: 'A toolkit for organizing, sharing, and composing reusable agent skills.',
     },
+    {
+      kicker: 'AI × Parenting',
+      title: 'babytime',
+      nameEn: 'babytime - AI family picture book',
+      href: 'https://github.com/xingbofeng/babytime',
+      zh: 'AI 驱动的家庭绘本应用，把孩子的照片和故事变成专属个性化绘本，支持 12 种艺术风格和 AI 图像生成。',
+      en: 'An AI-powered family picture book app that turns children\'s photos and memories into personalized storybooks with 12 art styles.',
+    },
+    {
+      kicker: 'macOS Native Tool',
+      title: 'VoiceInput',
+      nameEn: 'VoiceInput - macOS voice dictation',
+      href: 'https://github.com/xingbofeng/VoiceInput',
+      zh: 'macOS 菜单栏语音输入工具，按住右 Command 说话松手即输入，实时流式识别，可选 LLM 纠错。',
+      en: 'A macOS menu-bar voice dictation tool — hold right Command, speak, release to input with streaming recognition.',
+    },
   ],
   focusAreas: [
     {
@@ -93,5 +109,6 @@ export const profile = {
     { label: 'Xiaohongshu', href: 'https://www.xiaohongshu.com/user/profile/5fe3215600000000010032bb', descEn: 'Notes on personal exploration', descZh: '个人观点与创作沉淀' },
     { label: 'Bilibili', href: 'https://space.bilibili.com/31193282', descEn: 'Video channel', descZh: '视频内容与分享' },
     { label: 'Zhihu', href: 'https://www.zhihu.com/column/encounter', descEn: 'Technical writing', descZh: '技术写作' },
+    { label: 'X', href: 'https://x.com/Counterxing', descEn: 'Updates and thoughts', descZh: '动态与思考' },
   ],
 };

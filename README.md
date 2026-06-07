@@ -11,6 +11,7 @@
 [![Bilibili](https://img.shields.io/badge/Bilibili-Counterxing-00A1D6?style=for-the-badge&logo=bilibili&logoColor=white)](https://space.bilibili.com/31193282)
 [![Zhihu](https://img.shields.io/badge/Zhihu-Counter%E7%9A%84%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-056DE8?style=for-the-badge&logo=zhihu&logoColor=white)](https://www.zhihu.com/column/encounter)
 [![GitHub](https://img.shields.io/badge/GitHub-xingbofeng-181717?style=for-the-badge&logo=github)](https://github.com/xingbofeng)
+[![X](https://img.shields.io/badge/X-Counterxing-0f1419?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Counterxing)
 
 </div>
 
@@ -61,6 +62,18 @@ An engineering tool for browser automation and debugging workflows, making brows
 用于组织、沉淀和分发 Agent skills 的工具集合，让能力可以像卡片一样被复用和组合。
 
 A toolset for organizing, preserving, and sharing agent skills so capabilities can be reused and composed like cards.
+
+### [babytime](https://github.com/xingbofeng/babytime)
+
+AI 驱动的家庭绘本应用，把孩子的照片和故事变成专属个性化绘本，支持 12 种艺术风格和 AI 图像生成。
+
+An AI-powered family picture book app that turns children's photos and memories into personalized storybooks with 12 art styles.
+
+### [VoiceInput](https://github.com/xingbofeng/VoiceInput)
+
+macOS 菜单栏语音输入工具，按住右 Command 说话松手即输入，实时流式识别，可选 LLM 纠错。
+
+A macOS menu-bar voice dictation tool — hold right Command, speak, release to input with streaming recognition and optional LLM correction.
 
 ---
 
@@ -128,11 +141,11 @@ A toolset for organizing, preserving, and sharing agent skills so capabilities c
 ## Now / 当前
 
 - Exploring AI agents as systems that can participate in architecture, engineering, content, and product decisions.
-- Building and refining **baipiao**, **KidMemory**, **browser-helm**, and **skill-deck** as independent AI products and agent tools.
+- Building and refining **baipiao**, **KidMemory**, **browser-helm**, **skill-deck**, **babytime**, and **VoiceInput** as independent AI products and agent tools.
 - Writing about AI agents, full-stack architecture, product thinking, and multimodal creation workflows.
 
 - 我正在探索如何把智能体从对话入口，推进到能参与架构、工程、内容和产品决策的系统。
-- 我在继续打磨 **baipiao**、**KidMemory**、**browser-helm** 和 **skill-deck** 这些独立 AI 产品与 Agent 工具。
+- 我在继续打磨 **baipiao**、**KidMemory**、**browser-helm**、**skill-deck**、**babytime** 和 **VoiceInput** 这些独立 AI 产品与 Agent 工具。
 - 我也会持续写 AI Agent、全栈架构、产品思考和多模态创作工作流相关内容。
 
 ## Links / 链接
